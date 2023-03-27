@@ -1,0 +1,155 @@
+.header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  @media (min-width: 1439px) {
+    box-shadow: none;
+  }
+
+  .background-header{
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .header__menu{
+    z-index: 1;
+    box-shadow: 0 1px 0 0 $border-color;
+    background: white;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+
+    @media (min-width: 1440px) {
+      left: auto;
+    }
+  }
+
+  .header__menu-header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+
+    @media (min-width: 767px) {
+      .header__menu-burger-btn{
+        margin-right: 1rem;
+      }
+
+      .header__menu-burger-btn::before{
+        content: '';
+        height: 32px;
+        width: 2px;
+        background-color: $gray;
+        position: absolute;
+        transform: translate(3rem, 0.3rem);
+        z-index: 1;
+      }
+    }
+    
+    li{
+      margin-right: .5rem;
+
+      &:last-child{
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .header__menu-body{
+    li{
+      position: relative;
+      transition: all .5s;
+
+      a{
+        position: relative;
+        display: block;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: 600;
+
+        &:hover,
+        &:focus{
+          color: $grey-text;
+        }
+
+        &:hover::before,
+        &:focus::before{
+          content: '';
+          position: absolute;
+          left: -1rem;
+          top: 0;
+          background-color: $secondary;
+          width: 4px;
+          height: 100%;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+      }
+    }
+  }
+
+  .header__menu-footer{
+    position: absolute;
+    bottom: 1rem;
+    padding: 0;
+
+    li{
+      margin-bottom: .75rem;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    .header__menu-contacts{
+      display: flex;
+      padding: 0;
+
+      li{
+        margin-right: 1rem;
+      }
+    }
+
+    .header__menu-email,
+    .header__menu-tel{
+      color: black;
+      font-weight: 600;
+      font-size: .9rem;
+    }
+
+    .header__menu-tel{
+      font-size: 1rem;
+    }
+
+    .header__menu-lang{
+      display: flex;
+      margin-top: 2rem;
+
+      label{
+        margin-right: .9rem;
+        color: black;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      input{
+        visibility: hidden;
+        position: absolute;
+      }
+
+      input[type="radio"]:checked + label{
+        color: $grey-text;
+      }
+    }
+  }
+}

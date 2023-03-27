@@ -1,0 +1,141 @@
+.services{
+  margin-top: 6rem;
+
+  @media (min-width: 1439px) {
+    margin-top: 2rem;
+  }
+
+  .services__title{
+    font-weight: bold;
+    line-height: 2.5rem;
+    display: flex;
+    margin-bottom: .75rem;
+
+    @media (min-width: 1439px) {
+      margin-bottom: 2rem;
+    }
+  
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      background-color: $secondary;
+      width: 4px;
+      height: 2.5rem;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  .services__navigation{
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom:-1rem;
+
+    @media (min-width: 767px) {
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 1439px) {
+      overflow-x: hidden;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+
+  .services__item{
+    list-style: none;
+    margin: 2px;
+    margin-right: .25rem;
+
+    &:active,
+    &:focus,
+    &:hover{
+      outline: 2px solid $border-color;
+      border-radius: 6px;
+      background-color: white;
+    }
+  }
+
+  .services__link{
+    display: block;
+    white-space: nowrap;
+    padding: .5rem;
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: $grey-text;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .services__about{
+    display: flex;
+    flex-flow: column;
+
+    @media (min-width: 767px) {
+      align-items: flex-start;
+
+      .services__about-left-part{
+        margin-right: 5vw;
+        padding-top: 0;
+      }
+    }
+
+    @media (min-width: 1439px) {
+      align-items: flex-start;
+    }
+
+    .services__description{
+      line-height: 18px;
+      color: $black-text;
+      height: 90px;
+      overflow-y: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .services__read-more-button{
+      display: flex;
+      padding: 0;
+    }
+     
+    .services__about-text{
+      margin-left: 1rem;
+      line-height: 24px;
+      color: $black-text;
+    }
+     
+    .services__about-baner{
+
+      @media (min-width: 767px) {
+        max-width: 45%;
+        margin-right: 5vw;
+        border-radius: 6px;
+      }
+
+      @media (min-width: 1439px) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

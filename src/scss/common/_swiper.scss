@@ -1,0 +1,21 @@
+.swiper {
+  margin-top: 1rem;
+
+  @media (min-width: 767px) {
+    display: none !important;
+  }
+
+  .swiper-slide{
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .swiper-pagination{
+    position: relative;
+    margin-top: 1rem;
+  
+    .swiper-pagination-bullet-active{
+      background-color: $dark-gray;
+    }
+  }
+}

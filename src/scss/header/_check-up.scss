@@ -1,0 +1,76 @@
+.check-up{
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 0 1rem;
+  padding-top: 1.5rem;
+
+  // @media (min-width: 1439px) {
+  //   transform: translate(19rem);
+  // }
+
+  &::before{
+    content: '';
+    height: 32px;
+    width: 2px;
+    background-color: $gray;
+    position: absolute;
+    transform: translate(-7rem, 0.3rem);
+    right: 1rem;
+    z-index: -1;
+
+    @media (min-width: 1439px) {
+      display: none;
+    }
+  }
+
+  .check-up__contacts{
+    display: none;
+    padding: 0;
+
+    @media (min-width: 767px) {
+      display: flex;
+      margin-right: 1rem;
+    }
+
+    @media (min-width: 1439px) {
+      display: none;
+    }
+
+    li{
+      margin-right: 1rem;
+    }
+  }
+
+  .check-up__list{
+    display: flex;
+    justify-content: flex-end;
+
+    li{
+      margin-right: 1rem;
+      padding-bottom: 1px;
+    }
+
+    .check-up__check-status{
+      margin-right: 0;
+    }
+
+    @media (min-width: 1439px) {
+      .check-up__repair::before,
+      .check-up__check-status::before{
+        content: 'Оставить заявку';
+        display: inline-block;
+        font-weight: 600;
+        margin-right: .5rem;
+        transform: translate(0, -0.2rem);
+      }
+
+      .check-up__check-status::before{
+        content: 'Статус ремонта';
+      }
+    }
+  }
+}

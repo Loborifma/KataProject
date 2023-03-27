@@ -1,0 +1,23 @@
+@import "./normalize/mixins";
+@import "./normalize/fonts";
+@import "./normalize/vendor";
+@import "./normalize/vars";
+@import "./normalize/settings";
+@import "./common/button";
+@import "./common/visually-hidden";
+@import "./common/ref-text";
+@import "./common/swiper";
+@import "./common/repair";
+@import "./common/feedback-btn";
+@import "./body/body";
+@import "./header/header";
+@import "./header/check-up";
+@import "./header/forms";
+@import "./main/main";
+@import "./main/services";
+@import "./main/repair-technics";
+@import "./main/services-cost";
+@import "./footer/footer.scss";
+@import "swiper/scss/pagination";
+@import "swiper/scss";
+

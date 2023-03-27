@@ -1,0 +1,9 @@
+main{
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: 1439px) {
+    width: 1120px;
+    margin-left: auto;
+  }
+}

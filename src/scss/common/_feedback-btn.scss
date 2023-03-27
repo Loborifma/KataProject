@@ -1,0 +1,15 @@
+.feedback__send-btn{
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  margin-left: auto;
+
+  span{
+    color: white;
+    text-transform: uppercase;
+    margin-right: .5rem;
+    font-weight: 600;
+  }
+}

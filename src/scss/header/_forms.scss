@@ -1,0 +1,111 @@
+.forms{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+
+  .background-forms{
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .forms__window{
+    width: 320px;
+    background-color: white;
+    box-shadow: -16px 0px 52px rgba(14, 24, 80, 0.2);
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    @media (min-width: 767px) {
+      width: 440px;
+    }
+  }
+
+  .forms__close-btn{
+
+    @media (min-width: 1439px) {
+      position: absolute;
+      transform: translate(-5rem, 0.5rem);
+    }
+  }
+
+  .feedback{
+
+    legend{
+      display: block;
+      padding: 1rem 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      &::before{
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        transform: translate(0, -5px);
+        background-color: $secondary;
+        width: 3px;
+        height: 40px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+      }
+    }
+
+    .feedback__label{
+      color: $grey-text;
+      position: absolute;
+      transform: translate(1rem, -2rem);
+      transition: all .2s;
+      z-index: -1;
+    }
+
+    .feedback__label-textarea{
+      transform: translate(1rem, -6.5rem);
+    }
+
+    .feedback__input,
+    .feedback__textarea{
+      height: 48px;
+      border-radius: 8px;
+      border: 1px solid $gray;
+      display: block;
+      margin-top: 1.5rem;
+      padding: 0.5rem 1rem;
+      background-color: transparent;
+      color: $black-text;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .feedback__input:focus + .feedback__label,
+    .feedback__textarea:focus + .feedback__label{
+      transform: translate(1rem, -4rem);
+    }
+
+    .feedback__input:focus + .feedback__label-textarea,
+    .feedback__textarea:focus + .feedback__label-textarea{
+      transform: translate(1rem, -8.5rem);
+    }
+
+    .feedback__textarea{
+      height: 118px;
+    }
+
+    .feedback__copyright{
+      display: block;
+      margin: 1.5rem 0;
+      color: $grey-text;
+      font-weight: 600;
+      text-align: left;
+    }
+  }
+}

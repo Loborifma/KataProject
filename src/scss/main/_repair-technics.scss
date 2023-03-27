@@ -1,0 +1,17 @@
+.repair-technics{
+
+  .repair-technics__button{
+    padding: 1rem 0;
+    height: 160px;
+    align-items: flex-start;
+
+    .repair__button-see{
+      align-self: flex-end;
+    }
+
+    .repair-technics__title{
+      color: $black-text;
+      font-weight: 600;
+    }
+  }
+}
