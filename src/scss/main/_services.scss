@@ -79,6 +79,7 @@
 
     @media (min-width: 767px) {
       align-items: flex-start;
+      flex-flow: row;
 
       .services__about-left-part{
         margin-right: 5vw;
