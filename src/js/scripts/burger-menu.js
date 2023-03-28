@@ -10,7 +10,7 @@ let menuBody = menu.querySelector('.header__menu-body');
 let menuFooter = menu.querySelector('.header__menu-footer');
 let main = document.querySelector('main');
 let body = document.querySelector('body');
-let screenWidth = document.documentElement.clientWidth;
+let desktopWidth = window.matchMedia('(min-width: 1439px)');
 
 let openBurger = () => {
   menu.style.boxShadow = '16px 0px 52px rgba(14, 24, 80, 0.2)'
@@ -60,7 +60,7 @@ background.addEventListener('click', function(e){
   closeBurger();  
 });
 
-if(screenWidth >= 1440){
+if(desktopWidth.matches){
   openBurger();
   menu.style.boxShadow = 'none';
   main.style.zIndex = 2;
