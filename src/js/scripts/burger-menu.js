@@ -11,6 +11,7 @@ let menuFooter = menu.querySelector('.header__menu-footer');
 let main = document.querySelector('main');
 let body = document.querySelector('body');
 let desktopWidth = window.matchMedia('(min-width: 1439px)');
+let mobileWidth = window.matchMedia('(min-width: 767px)');
 
 let openBurger = () => {
   menu.style.boxShadow = '16px 0px 52px rgba(14, 24, 80, 0.2)'
@@ -68,3 +69,7 @@ if(desktopWidth.matches){
   burgerClose.classList.toggle('visually-hidden');
   background.classList.toggle('visually-hidden');
 }
+
+// if(mobileWidth.matches){
+//   closeBurger();
+// }
