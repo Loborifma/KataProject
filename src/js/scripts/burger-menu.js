@@ -12,7 +12,7 @@ let main = document.querySelector('main');
 let body = document.querySelector('body');
 let desktopWidth = window.matchMedia('(min-width: 1439px)');
 let mobileWidth = window.matchMedia('(min-width: 767px)');
-let screenWidth = document.documentElement.clientWidth;
+
 
 let openBurger = () => {
   menu.style.boxShadow = '16px 0px 52px rgba(14, 24, 80, 0.2)'
@@ -70,3 +70,12 @@ if(desktopWidth.matches){
   burgerClose.classList.add('visually-hidden');
   background.classList.add('visually-hidden');
 }
+
+window.addEventListener('resize', () => {
+  let screenWidth = document.documentElement.clientWidth;
+  
+  if(screenWidth === 1439){
+    location.reload();
+    return false;
+  }
+})
