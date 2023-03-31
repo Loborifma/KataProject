@@ -12,6 +12,7 @@ let call = forms.querySelector('.feedback__call');
 let legend = forms.querySelector('.forms__window > .feedback > span');
 let closeFormBtn = forms.querySelector('.forms__close-btn');
 let main = document.querySelector('main');
+let desktopWidth = window.matchMedia('(min-width: 1439px)');
 let screenWidth = document.documentElement.clientWidth;
 
 let countChat = 0;
@@ -97,3 +98,7 @@ background.addEventListener('click', function(e){
   closeForm();
 });
 
+if(desktopWidth.matches){
+  checkUp.style.zIndex = 3;
+  checkUp.style.bottom = 'auto';
+}

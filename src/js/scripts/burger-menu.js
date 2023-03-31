@@ -12,6 +12,7 @@ let main = document.querySelector('main');
 let body = document.querySelector('body');
 let desktopWidth = window.matchMedia('(min-width: 1439px)');
 let mobileWidth = window.matchMedia('(min-width: 767px)');
+let screenWidth = document.documentElement.clientWidth;
 
 let openBurger = () => {
   menu.style.boxShadow = '16px 0px 52px rgba(14, 24, 80, 0.2)'
@@ -21,13 +22,13 @@ let openBurger = () => {
   body.style.overflow = 'hidden';
   checkUp.style.zIndex = '-1';
   main.style.zIndex = '-1';
-  burgerClose.classList.toggle('visually-hidden');
-  searchBtn.classList.toggle('visually-hidden');
-  burger.classList.toggle('visually-hidden');
+  burgerClose.classList.remove('visually-hidden');
+  searchBtn.classList.remove('visually-hidden');
+  burger.classList.add('visually-hidden');
   menuHeader.style.marginBottom = '24px';
-  menuBody.classList.toggle('visually-hidden');
-  menuFooter.classList.toggle('visually-hidden');
-  background.classList.toggle('visually-hidden');
+  menuBody.classList.remove('visually-hidden');
+  menuFooter.classList.remove('visually-hidden');
+  background.classList.remove('visually-hidden');
 }
 
 let closeBurger = () => {
@@ -39,13 +40,13 @@ let closeBurger = () => {
   checkUp.style.zIndex = '1';
   main.style.zIndex = '2';
   body.style.overflow = 'auto';
-  background.classList.toggle('visually-hidden');
-  burgerClose.classList.toggle('visually-hidden');
-  searchBtn.classList.toggle('visually-hidden');
-  burger.classList.toggle('visually-hidden');
+  background.classList.add('visually-hidden');
+  burgerClose.classList.add('visually-hidden');
+  searchBtn.classList.add('visually-hidden');
+  burger.classList.remove('visually-hidden');
   menuHeader.style.marginBottom = '0';
-  menuBody.classList.toggle('visually-hidden');
-  menuFooter.classList.toggle('visually-hidden');
+  menuBody.classList.add('visually-hidden');
+  menuFooter.classList.add('visually-hidden');
 }
 
 burger.addEventListener('click', function(e){
@@ -66,10 +67,6 @@ if(desktopWidth.matches){
   menu.style.boxShadow = 'none';
   main.style.zIndex = 2;
   body.style.overflow = 'auto';
-  burgerClose.classList.toggle('visually-hidden');
-  background.classList.toggle('visually-hidden');
+  burgerClose.classList.add('visually-hidden');
+  background.classList.add('visually-hidden');
 }
-
-// if(mobileWidth.matches){
-//   closeBurger();
-// }
