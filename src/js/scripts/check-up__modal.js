@@ -101,3 +101,10 @@ if(desktopWidth.matches){
   checkUp.style.zIndex = 3;
   checkUp.style.bottom = 'auto';
 }
+
+window.addEventListener('resize', () => {
+  if(desktopWidth.matches){
+    checkUp.style.zIndex = 3;
+    checkUp.style.bottom = 'auto';
+  }
+})
