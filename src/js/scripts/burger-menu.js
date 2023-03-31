@@ -1,17 +1,17 @@
-let header = document.querySelector('.header');
-let menu = document.querySelector('.header__menu');
-let background = document.querySelector('.background-header');
-let checkUp = document.querySelector('.check-up');
-let burger = menu.querySelector('.header__menu-burger-btn');
-let burgerClose = menu.querySelector('.header__menu-close-btn');
-let searchBtn = menu.querySelector('.header__menu-search-btn');
-let menuHeader = menu.querySelector('.header__menu-header');
-let menuBody = menu.querySelector('.header__menu-body');
-let menuFooter = menu.querySelector('.header__menu-footer');
-let main = document.querySelector('main');
-let body = document.querySelector('body');
-let desktopWidth = window.matchMedia('(min-width: 1439px)');
-let mobileWidth = window.matchMedia('(min-width: 767px)');
+const header = document.querySelector('.header');
+const menu = document.querySelector('.header__menu');
+const background = document.querySelector('.background-header');
+const checkUp = document.querySelector('.check-up');
+const burger = menu.querySelector('.header__menu-burger-btn');
+const burgerClose = menu.querySelector('.header__menu-close-btn');
+const searchBtn = menu.querySelector('.header__menu-search-btn');
+const menuHeader = menu.querySelector('.header__menu-header');
+const menuBody = menu.querySelector('.header__menu-body');
+const menuFooter = menu.querySelector('.header__menu-footer');
+const main = document.querySelector('main');
+const body = document.querySelector('body');
+const desktopWidth = window.matchMedia('(min-width: 1439px)');
+const mobileWidth = window.matchMedia('(min-width: 767px)');
 
 
 let openBurger = () => {
