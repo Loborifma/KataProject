@@ -9,6 +9,8 @@ const checkUpChatBtn = checkUp.querySelector('.check-up__chat-btn');
 const formsWindow = forms.querySelector('.forms__window');
 const chat = forms.querySelector('.feedback__chat');
 const call = forms.querySelector('.feedback__call');
+const chatInput = forms.querySelector('.feedback__chat > input:first-child');
+const callInput = forms.querySelector('.feedback__call > input:first-child');
 const legend = forms.querySelector('.forms__window > .feedback > span');
 const closeFormBtn = forms.querySelector('.forms__close-btn');
 const main = document.querySelector('main');
@@ -24,6 +26,7 @@ let openFormChat = () => {
   forms.classList.toggle('visually-hidden');
   chat.classList.toggle('visually-hidden');
   background.classList.toggle('visually-hidden');
+  chatInput.focus();
   main.style.zIndex = -1;
   countChat++;
 }
@@ -32,6 +35,7 @@ let openFormCall = () => {
   call.classList.toggle('visually-hidden');
   background.classList.toggle('visually-hidden');
   legend.textContent = 'Заказать звонок';
+  callInput.focus();
   main.style.zIndex = -1;
   countCall++;
 }
